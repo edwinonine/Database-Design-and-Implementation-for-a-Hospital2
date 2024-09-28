@@ -25,4 +25,55 @@ During the initial consultation, key insights were gathered about the specific r
 . **Departments:** Structure and location of various hospital departments.
 
 This database solution will integrate these elements into a cohesive system, ensuring that the hospital can effectively manage and retrieve critical data in real time.
+
+## 2.0 Database Design: Third Normal Form (3NF)
+
+The goal of normalizing a database into Third Normal Form (3NF) is to reduce data redundancy and ensure data integrity by organizing tables and relationships correctly. The normalization process involves decomposing tables to meet specific rules for 1NF, 2NF, and 3NF.
+
+Steps in the Normalization Process:
+
+1. **First Normal Form (1NF):**
+
+      - Ensure that the table has no repeating groups (i.e., every column contains atomic values).
+  
+      - Ensure that each column contains a single value.
+  
+2. **Second Normal Form (2NF):**
+
+      - Ensure that the table is in 1NF.
+  
+      - Remove partial dependencies, meaning every non-key column must depend on the entire primary key, not just part of it.
+3. **Third Normal Form (3NF):**
+
+      - Ensure that the table is in 2NF.
+  
+      - Remove transitive dependencies, meaning non-key columns should depend only on the primary key and nothing else.
+  
+**Proposed Database Structure in 3NF:**
+
+Tables:
+
+1.	**Patients:**
+   
+    - Stores information about patients.
+    
+2.	**Doctors:**
+  
+    - Stores information about doctors.
+
+4.	**Medical Records:**
+   
+    - Stores information on patients’ medical diagnoses, prescriptions, allergies, etc.
+
+6.	**Appointments:**
+   
+    - Stores scheduling information for appointments between patients and doctors.
+
+8.	**Departments:**
+   
+    - Stores department-related information, including doctor association.
  
+
+
+
+
